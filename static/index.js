@@ -341,11 +341,26 @@ function shareText(score) {
         return '倒计时多了' + ((deviation_time / 1000) - 20).toFixed(2) + "s";
     }
     SubmitResults();
-    if (score < 30) return 'tseeeeeeeeew B!';
-    if (score < 60) return '艹死你妈';
-    if (score < 90) return '爆破准备';
-    if (score < 120) return '444! 你说得都对！不要草粉！艹你妈V!';
-    return 'https://music.163.com/#/song?id=1892664193';
+    if (_gameTimeNum <= 0 && score == 1){
+        return '<a href="https://music.163.com/#/song?id=1892664193">真结局</a>';
+    }
+    /*
+    congratText = [
+        [33, 'tseeeeeeeeew B!'],
+        [66, '爆~破准备！'],
+        [99, '444! 你说得都对！不要草粉！艹你妈V!']
+        [114514, '<a href="http://b23.tv/kEqz6S">点击查看YLK大片</a>'],
+    ]
+    */
+    congratText = [
+        [33, 'æ，æ，æ，内个，我也不知道'],
+        [66, 'IIB\nBK'],
+        [99, '川b好可爱'],
+        [114514, '<a href="http://b23.tv/kEqz6S">点击查看川b大片</a>'],
+    ]
+    for(var i = 0; ; i++){
+        if(score <= congratText[i][0]) return congratText[i][1];
+    }
 }
 
 function toStr(obj) {
@@ -408,9 +423,14 @@ function goRank() {
     }
     window.location.href=link;
 }
-console.log("不修改，好嘛？乱传又有什么用呢？(ˉ▽ˉ；)...")
+console.log("狗攀，老子知道是你")
+
+//123 = F12, This code disables F12
+/*
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
         return false
     }
 };
+
+ */
