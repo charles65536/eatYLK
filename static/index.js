@@ -341,11 +341,11 @@ function shareText(score) {
         return '倒计时多了' + ((deviation_time / 1000) - 20).toFixed(2) + "s";
     }
     SubmitResults();
-    if (score <= 49) return '叔叔很生气';
-    if (score <= 99) return '你所热爱的就是你的生活';
-    if (score <= 149) return '您就是蒙古上单？';
-    if (score <= 199) return '您马什么时候4啊？';
-    return '人？';
+    if (score < 30) return 'tseeeeeeeeew B!';
+    if (score < 60) return '艹死你妈';
+    if (score < 90) return '爆破准备';
+    if (score < 120) return '444! 你说得都对！不要草粉！艹你妈V!';
+    return 'https://music.163.com/#/song?id=1892664193';
 }
 
 function toStr(obj) {
